@@ -16,4 +16,6 @@ public class PersonService
     }
     
     public List<Person> GetAll() => _collection.Find(new BsonDocument()).ToList();
+
+    public void Delete(ObjectId id) => _collection.DeleteOne(p => p.Id == id);
 }

@@ -1,0 +1,14 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="People.Components.InputTextComponent"
+             x:Name="Component">
+    <Grid ColumnDefinitions="*, 3*">
+        <Label Content="{Binding ElementName=Component, Path=LabelText}"
+               Target="{Binding ElementName=InputBirthDate}"
+               Grid.Column="0"/>
+        <TextBox x:Name="InputBirthDate"
+                 IsReadOnly="{Binding ElementName=Component, Path=IsReadOnly}"
+                 Text="{Binding ElementName=Component, Path=InputText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 Grid.Column="1"/>
+    </Grid>
+</UserControl>
