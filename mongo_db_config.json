@@ -1,0 +1,6 @@
+﻿{
+  "server": "localhost",
+  "port": 27017,
+  "database": "people_db",
+  "collection": "people"
+}
